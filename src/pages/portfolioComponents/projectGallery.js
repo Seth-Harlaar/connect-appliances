@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import PictureSlider from "./pictureSlider";
+import { ModalContext } from "../../providers/modalProvder";
 
 // info
 function ProjectGallery({projectInfo}){

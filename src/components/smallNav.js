@@ -40,7 +40,7 @@ function Drawer ({closeDrawer}) {
                 CONNECT 
               </div>
               <div>
-                Appliances
+                Appliance
               </div>
             </div>
           </div>
@@ -54,16 +54,8 @@ function FloatingLogo() {
   return (
     <>
       {/* logo at bottom */}
-      <div className="z-50 fixed top-3 left-3 w-36 h-12 flex items-center justify-between text-white">
+      <div className="z-50 fixed top-3 left-3 w-12 h-12 flex items-center justify-between text-white">
       <img src={logoPic} alt="logo" className='w-12 h-12'/>
-      <div>
-        <div>
-          CONNECT 
-        </div>
-        <div>
-          Appliances
-        </div>
-      </div>
     </div>
     </>
   )

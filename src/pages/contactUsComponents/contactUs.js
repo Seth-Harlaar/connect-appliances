@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import PageBanner from "../../components/pageBanner";
 import ContactForm from "./contactForm";
-import {ScreenContext} from "../../components/screenProvider";
+import {ScreenContext} from "../../providers/screenProvider";
 
 function ContactUs() {
   const {isSmallScreen} = useContext(ScreenContext);

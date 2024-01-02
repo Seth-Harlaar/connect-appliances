@@ -52,7 +52,7 @@ function LargeNav() {
           <img src={logoPic} alt="" className={imageDimensions}/>
           <div className={linkDisplay + " flex flex-col items-center "}>
             <div>
-              CONNECT Appliances
+              CONNECT Appliance
             </div>
             <hr className="border w-10/12 border-primaryText" />
             <div>

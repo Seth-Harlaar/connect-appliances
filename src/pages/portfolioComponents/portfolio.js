@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 
 // components
 import PageBanner from "../../components/pageBanner";
-import { ScreenContext } from "../../components/screenProvider";
+import { ScreenContext } from "../../providers/screenProvider";
 import ProjectGallery from "./projectGallery"
 import portfolioContent from "../../assets/content/portfolioContent";
 

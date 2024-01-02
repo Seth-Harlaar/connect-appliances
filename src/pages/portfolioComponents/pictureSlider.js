@@ -1,11 +1,10 @@
 import React, {useContext, useEffect, useState} from "react";
+import {ModalContext} from "../../providers/modalProvder";
 
 // components
-import { ScreenContext } from "../../components/screenProvider";
+import { ScreenContext } from "../../providers/screenProvider";
 import { IoMdArrowDropleftCircle } from "react-icons/io";
 import { IoMdArrowDroprightCircle } from "react-icons/io";
-
-
 
 function PictureSlider({imageList}){
   const imageListLength = imageList.length;
@@ -66,6 +65,8 @@ function PictureSlider({imageList}){
     }
   }
 
+  
+
 
   // styles
   const sliderOffset = `${offset}%`;
@@ -82,13 +83,20 @@ function PictureSlider({imageList}){
     sliderHeight = " h-[762px] ";
   }
   
-  const pictureStyles = ` ${sliderHeight} min-w-full object-cover px-2 select-none`;
+  const pictureStyles = ` ${sliderHeight} min-w-full object-cover px-2 select-none hover:cursor-pointer`;
   const padderStyles = ` ${sliderHeight} min-w-full flex-none bg-lightBgDark px-2`;
   const sliderStyles = ` ${sliderHeight} relative h-[250px] w-full duration-100 `;
 
   const arrowStyles = " absolute inset-y-0 h-full text-6xl hover:cursor-pointer";
   const rightArrowColor = canMoveRight ? " text-highlight " : " text-black ";
   const leftArrowColor = canMoveLeft ? " text-highlight " : " text-black ";
+
+  // functionality for setting modal children to view the image in more detail
+  const {openModal} = useContext(ModalContext);
+
+  function showImageInModal(imageSrc){
+    openModal(<ImageForModal imageSrc={imageSrc}/>);
+  }
 
   return(
     <>
@@ -100,7 +108,7 @@ function PictureSlider({imageList}){
               <div className={padderStyles}/>
               {/* create each image */}
               {imageList.map((image, index) => {
-                return( <img className={pictureStyles} src={image} alt={"gallery"} key={index}/> );
+                return( <img className={pictureStyles} src={image} alt={"gallery"} key={index} onClick={() => showImageInModal(image)} /> );
               })}
               
               <div className={padderStyles}/>
@@ -113,6 +121,18 @@ function PictureSlider({imageList}){
       </div>
     </>
   );
+}
+
+
+function ImageForModal({imageSrc}){
+  const pictureStyles = "h-full min-w-full object-cover px-2 select-none";
+
+  return(
+    <>
+      {/* <div>asdfasdfasdf</div> */}
+      <img className={pictureStyles} src={imageSrc} alt={"gallery"}/>
+    </>
+  )
 }
 
 export default PictureSlider;

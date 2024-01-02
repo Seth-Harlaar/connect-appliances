@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { CiMail } from "react-icons/ci";
 import { Link } from "react-router-dom";
+import { ModalContext } from "../providers/modalProvder";
 
 
 function ContactInfo(){
@@ -38,6 +39,9 @@ function ContactInfo(){
 }
 
 function ContactLink(){
+
+  const {openModal} = useContext(ModalContext);
+
   return(
     <>
       <div className="flex flex-col items-center space-y-5 py-10 pb-10">
@@ -52,6 +56,10 @@ function ContactLink(){
         <Link className="p-4 bg-highlight w-32 text-highlightText" to="/contact"> 
           Contact us <CiMail className="inline-block"/>
         </Link>
+        
+        <div className="w-32 h-10 bg-highlight hover:cursor-pointer" onClick={openModal}>
+          open modal
+        </div>
       </div>
     </>
   )

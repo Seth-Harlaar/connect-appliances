@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import {Route, Routes } from 'react-router-dom';
-import {ScreenContext} from '../components/screenProvider';
+import {ScreenContext} from '../providers/screenProvider';
 
 // navigators
 import LargeNav from '../components/largeNav';
@@ -17,10 +17,9 @@ import ScrollToTop from '../components/scrollToTop';
 
 
 
-
-
 function Main() {
   const {isSmallScreen} = useContext(ScreenContext);
+
 
   return (
     <>

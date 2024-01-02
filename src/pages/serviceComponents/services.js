@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import PageBanner from "../../components/pageBanner";
-import {ScreenContext} from "../../components/screenProvider";
+import {ScreenContext} from "../../providers/screenProvider";
 
 import serviceListingsInfo from "../../assets/content/homeServicesContent";
 
