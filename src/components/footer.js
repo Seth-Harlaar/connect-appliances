@@ -13,7 +13,7 @@ function ContactInfo(){
             Email
           </div>
           <div className="text-sm">
-            cravanconstruction@gmail.com
+            installs@connectappliance.com
           </div>
         </div>
         <div>
@@ -21,7 +21,7 @@ function ContactInfo(){
             Phone
           </div>
           <div className="text-sm">
-            519-400-2222
+            (226) 887-3737
           </div>
         </div>
         <div>
@@ -49,7 +49,7 @@ function ContactLink(){
         </div>
 
         {/* contact button */}
-        <Link className="p-4 bg-highlight w-32" to="/contact"> 
+        <Link className="p-4 bg-highlight w-32 text-highlightText" to="/contact"> 
           Contact us <CiMail className="inline-block"/>
         </Link>
       </div>

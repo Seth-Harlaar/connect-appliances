@@ -12,7 +12,7 @@ function ServiceListing({title, text, Icon, isSmallScreen}){
       <div className={serviceListingWidth + 
           "flex flex-col items-center px-10 pt-16 hover:scale-[1.2] ease-in-out duration-200 "}>
         <div className=" bg-highlight rounded-full p-5">
-          <Icon className="h-10 w-10 text-darkBg"/>
+          <Icon className="h-10 w-10 text-highlightText"/>
         </div>
 
         <div className="text-2xl text-center py-3">

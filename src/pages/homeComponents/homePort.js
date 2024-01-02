@@ -34,12 +34,9 @@ function HomePort({isSmallScreen}) {
 
   return (
     <>
-      <div className="flex flex-col items-center py-8 bg-darkBg text-white">
+      <div className="flex flex-col items-center py-8 bg-tertiaryBg text-white">
         <div className="text-3xl ">
           Our Work
-        </div>
-        <div className="text-">
-          Explore some of our projects.
         </div>
 
         {/* pictures */}
@@ -55,9 +52,9 @@ function HomePort({isSmallScreen}) {
         {/* bottom message */}
         <div className="pt-8 px-5 flex text-center">
           <div className="text-xl text-white">
-            See what else we can do in the <Link to="/portfolio"><span className="hover:bg-highlight pb-1">
+            Explore some of our other projects in the <Link to="/portfolio"><span className="hover:bg-highlight pb-1">
                 portfolio
-                <FaArrowRight className="text-darkBg inline ml-2"/>
+                <FaArrowRight className="text-tertiaryBg inline ml-2"/>
               </span>
             </Link>
           </div>

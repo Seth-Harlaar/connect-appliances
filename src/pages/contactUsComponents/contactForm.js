@@ -105,7 +105,7 @@ function ContactForm() {
               <input name="message" placeholder="message" className={inputStyle} onChange={handleInputChange}/>
               <label for="message" className={labelStyle}>Message</label>
             </div>
-            <button type="submit" className="p-4 bg-highlight w-32">Send</button>
+            <button type="submit" className="p-4 bg-highlight w-32 text-highlightText">Send</button>
           </div>
         </form>
       </div>

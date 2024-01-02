@@ -16,7 +16,7 @@ function HomeBanner ({isSmallScreen}) {
           {/* floating textbox */}
           <div className="absolute h-20 w-[300px] bottom-10 left-10 bg-lightBg px-3 flex flex-col justify-center opacity-100">
             <div className="text-lg">
-              Crafting Dreams, Building Homes: <br/> Cravan Construction
+              Installing Peace of Mind.
             </div>
 
             {/* floating portfolio button */}
@@ -24,10 +24,10 @@ function HomeBanner ({isSmallScreen}) {
                 className="absolute bottom-0 right-5 translate-y-2/3 
                 bg-highlight py-1 px-2 flex items-center hover:cursor-pointer 
                 hover:bg-highlightHover">
-              <div className="mr-2">
+              <div className="mr-2 text-highlightText">
                 View Portfolio
               </div>
-              <FaArrowRight/>
+              <FaArrowRight className="text-highlightText"/>
             </Link>
           </div>
         </div>

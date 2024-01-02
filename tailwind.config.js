@@ -25,6 +25,7 @@ module.exports = {
         // text
         "primaryText": "#000000",
         "secondText": "#4D4D4D",
+        "highlightText": "#ffffff",
 
         // special
         "drawerClearBg": "rgba(0,0,0,.7)",

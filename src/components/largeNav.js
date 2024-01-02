@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logoPic from '../assets/logo.png';
+import logoPic from '../assets/logo.jpg';
 import { NavLink } from "react-router-dom";
 
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
@@ -38,7 +38,7 @@ function LargeNav() {
           <div className={"flex justify-center items-center min-w-[640px] bg-primaryBg duration-100 " + barHeight}>
             <NavLink className={linkWrapperStyle} to='services'>Services</NavLink>
             <NavLink className={linkWrapperStyle} to='portfolio'>Portfolio</NavLink>
-            <div className='w-40'></div>
+            <div className='w-44'></div>
             <NavLink className={linkWrapperStyle} to='testimonials'>Testimonials</NavLink>
             <NavLink className={linkWrapperStyle} to='contact'>Contact Us</NavLink>
           </div>
@@ -48,11 +48,11 @@ function LargeNav() {
         <NavLink to="/"
           className={'fixed top-0 left-1/2 transform -translate-x-1/2 ' + 
             ' flex flex-col items-center justify-center hover:cursor-pointer duration-100 ' +
-            ' w-40 bg-primaryBg text-primaryText shadow-lg hover:bg-secondBg' + middleHeight }>
+            ' w-44 bg-primaryBg text-primaryText shadow-lg hover:bg-secondBg' + middleHeight }>
           <img src={logoPic} alt="" className={imageDimensions}/>
-          <div className={linkDisplay}>
+          <div className={linkDisplay + " flex flex-col items-center "}>
             <div>
-              Cravan Construction
+              CONNECT Appliances
             </div>
             <hr className="border w-10/12 border-primaryText" />
             <div>
