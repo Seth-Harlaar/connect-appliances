@@ -10,6 +10,8 @@ module.exports = {
         "primaryBg": "#fff",      // 
         "secondBg": "#e8e8e8",    // light
         "tertiaryBg": "#1e1e1e",  // dark
+        "compBg": "#CB473A",      // complementary - analagous
+
         "darkBg": "#252636",
         "darkBgHover": "#333547",
         "darkBgLight": "#2a2a3c",
