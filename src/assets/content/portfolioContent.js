@@ -3,21 +3,21 @@ import { project1Images, project2Images, project3Images } from "../pictures/port
 
 const portfolioContent = [
   {
-    "shortDesc" : "Addition, gable",
-    "title": "Upper cresmont home",
-    "longDesc": "Revamping a suburban home, our construction project embraced innovation with a striking addition—a new gable. Seamlessly integrating into the existing structure, the gable expanded living space, infusing modern aesthetics. Crafted with precision, this architectural marvel not only enhanced functionality but also elevated the property's visual allure.",
+    "shortDesc" : "--",
+    "title": "--",
+    "longDesc": "Beautiful Gaggenauo kitchen install, along with Marvel fridge, and Thermador for the basement bar.",
     "imageList": project1Images
   },
   {
-    "shortDesc" : "Modern, Sustainable",
-    "title": "Toronto, Ontario",
-    "longDesc": "Nestled in Toronto's vibrant core, these sustainable condos blend modern architecture with eco-friendly design. Each unit boasts state-of-the-art amenities, energy-efficient systems, and a community focus on green living. Enjoy urban convenience while minimizing your ecological footprint.",
+    "shortDesc" : "--",
+    "title": "Kitchener, Ontario",
+    "longDesc": "Beautiful Fisher and Paykel kitchen appliance package - installed for Granite Homes.",
     "imageList": project2Images
   },
   {
-    "shortDesc" : "Contemporary, Family-Friendly, Subdivision",
-    "title": "Calgary, Alberta",
-    "longDesc": "Situated in a burgeoning Calgary suburb, this contemporary subdivision caters to families seeking a harmonious blend of convenience and community. Featuring parks, schools, and thoughtfully crafted homes, it fosters a neighborly atmosphere for growing families seeking a modern lifestyle.",
+    "shortDesc" : "--",
+    "title": "--",
+    "longDesc": "Beautiful La Courne range and panelled Gaggenau refrigeration.",
     "imageList": project3Images
   },
 ];

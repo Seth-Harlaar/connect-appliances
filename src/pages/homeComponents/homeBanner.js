@@ -12,7 +12,7 @@ function HomeBanner ({isSmallScreen}) {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % brands.length);
-    }, 2000);
+    }, 2500);
 
     return () => clearInterval(interval);
   }, [brands.length]);
@@ -31,8 +31,16 @@ function HomeBanner ({isSmallScreen}) {
         {/* make 'premium' word cycling between all the different brands they serve */}
 
         <div className="w-1/2 h-full flex flex-col justify-center px-10 ">
-          <div className="text-white duration-100">
-            One stop for in-home, <span>{currentWord}</span> appliance services.
+          <div className="text-white w-full max-w-[650px] m-auto text-4xl">
+            <div className="">
+              One stop for in-home,
+            </div>
+            <div className="text-center text-highlight">
+              {currentWord}
+            </div>
+            <div className="text-right">
+              appliance services.
+            </div>
           </div>
 
         </div>

@@ -1,37 +1,35 @@
-import { PiWarehouse } from "react-icons/pi";
+import dishwasher from "../icons/dishwasher.png";
+import dryer from "../icons/dryer.png";
+import fridge from "../icons/fridge.png";
+import microwave from "../icons/microwave.png";
+import stove from "../icons/stove.png";
+import washer from "../icons/wash.png";
 
-import oven from "../icons/oven.png";
 
 const serviceListingsInfo = [
   {
-    "title": "Framing",    
-    "icon": PiWarehouse,
-    "picture": oven,
+    "title": "Refrigerators",
+    "picture": fridge,
   },
   {
-    "title": "Additions",
-    "icon": PiWarehouse,
-    "picture": oven,
+    "title": "Ovens",
+    "picture": stove,
   },
   {
-    "title": "Renovations",
-    "icon": PiWarehouse,
-    "picture": oven,
+    "title": "Microwaves",
+    "picture": microwave,
   },
   {
-    "title": "Renovations",
-    "icon": PiWarehouse,
-    "picture": oven,
+    "title": "Dishwashers",
+    "picture": dishwasher,
   },
   {
-    "title": "Renovations",
-    "icon": PiWarehouse,
-    "picture": oven,
+    "title": "Tumble Dyers",
+    "picture": dryer,
   },
   {
-    "title": "Renovations",
-    "icon": PiWarehouse,
-    "picture": oven,
+    "title": "Washing Machines",
+    "picture": washer,
   },
 ]
 

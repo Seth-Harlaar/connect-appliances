@@ -54,7 +54,7 @@ function HomePort({isSmallScreen}) {
           <div className="text-xl text-white">
             Explore some of our other projects in the <Link to="/portfolio"><span className="hover:bg-highlight pb-1">
                 portfolio
-                <FaArrowRight className="text-tertiaryBg inline ml-2"/>
+                <FaArrowRight className="text-tertiaryBg inline mx-2"/>
               </span>
             </Link>
           </div>

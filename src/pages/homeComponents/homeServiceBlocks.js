@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 import {ScreenContext} from "../../providers/screenProvider";
 import serviceListingsInfo from "../../assets/content/homeServicesContent";
-import oven from "../../assets/icons/oven.png";
 import {widthMax} from "../../utils/globals";
+import { Link } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa";
 
-function ServiceListing({title, Icon, picture }){
+
+function ServiceListing({title, picture }){
   // const serviceListingWidth = isSmallScreen ? " w-full " : " w-[300px] ";
   const serviceListingWidth = `  `;
 
@@ -14,7 +16,7 @@ function ServiceListing({title, Icon, picture }){
       <div className={serviceListingWidth + 
           "flex-none flex flex-col items-center px-2 pt-6 hover:scale-[1.2] ease-in-out duration-200 "}>
         
-        <img src={oven} alt="icon" className=" w-16 h-16"/>
+        <img src={picture} alt="icon" className=" w-16 h-16"/>
 
         <div className="text-xl text-center py-3">
           {title}
@@ -46,8 +48,8 @@ function HomeServiceBlocks () {
           Our Services
         </div>
 
-        <div className=" w-3/4 m-auto text-center pt-4">
-          We specialize in providing expert in-home repair or replacement services for a wide range of Samsung and LG household appliances, including refrigerators, washers, dryers, ovens, and microwave, ensuring efficient and reliable solutions to keep your appliances running smoothly.
+        <div className=" w-3/4 m-auto text-center py-5">
+          We specialize in providing expert in-home repair or replacement services for a wide range of premium household appliances, including refrigerators, ovens, microwaves, dishwashers, tumble dryers, washing machines, and more, ensuring efficient and reliable solutions to keep your appliances running smoothly.
         </div>
 
 
@@ -57,11 +59,22 @@ function HomeServiceBlocks () {
             return(
               <>
                 <ServiceListing key={index}
-                  title={service.title} text={service.text} Icon={service.icon} 
+                  title={service.title} picture={service.picture}
                   isSmallScreen={isSmallScreen}/>
               </>
             )
           })}
+        </div>
+
+        {/* bottom message */}
+        <div className="pt-10 px-5 text-center">
+          <div className="text-xl text-primaryText">
+            And more! See more details about our services <Link to="/services"><span className="group hover:bg-highlight hover:text-highlightText pb-1">
+                here
+                <FaArrowRight className="text-tertiaryBg group-hover:text-highlightText inline ml-2 mr-1"/>
+              </span>
+            </Link>
+          </div>
         </div>
       </div>
     </>
