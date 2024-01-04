@@ -18,7 +18,7 @@ module.exports = {
         
         // highlights
         "highlight": "#A6372C",
-        "highlightHover": "#ffce3d",
+        "highlightHover": "#b53a2d",
         "highlightOpac": 'rgba(166, 55, 44, .8)',
         "highlightDark": "#4D4D4D",
 

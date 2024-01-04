@@ -1,25 +1,23 @@
-import React from "react";
-
+import React, { useContext } from "react";
+import {ScreenContext} from "../../providers/screenProvider";
 import serviceListingsInfo from "../../assets/content/homeServicesContent";
+import oven from "../../assets/icons/oven.png";
+import {widthMax} from "../../utils/globals";
 
-
-function ServiceListing({title, text, Icon, isSmallScreen}){
-  const serviceListingWidth = isSmallScreen ? " w-full " : " w-[300px] ";
+function ServiceListing({title, Icon, picture }){
+  // const serviceListingWidth = isSmallScreen ? " w-full " : " w-[300px] ";
+  const serviceListingWidth = `  `;
 
   return(
     <>
       {/* service listing */}
       <div className={serviceListingWidth + 
-          "flex flex-col items-center px-10 pt-16 hover:scale-[1.2] ease-in-out duration-200 "}>
-        <div className=" bg-highlight rounded-full p-5">
-          <Icon className="h-10 w-10 text-highlightText"/>
-        </div>
+          "flex-none flex flex-col items-center px-2 pt-6 hover:scale-[1.2] ease-in-out duration-200 "}>
+        
+        <img src={oven} alt="icon" className=" w-16 h-16"/>
 
-        <div className="text-2xl text-center py-3">
+        <div className="text-xl text-center py-3">
           {title}
-        </div>
-        <div className="text-justify">
-          {text}
         </div>
       </div>
     </>
@@ -28,11 +26,17 @@ function ServiceListing({title, text, Icon, isSmallScreen}){
 
 
 
-function HomeServiceBlocks ({isSmallScreen}) {
+function HomeServiceBlocks () {
   
-  const serviceListingContainer = !isSmallScreen ? 
-    "flex flex-wrap justify-center" :
-    "";
+  const {isSmallScreen, isLrgSCreen, isMegaScreen} = useContext(ScreenContext);
+  
+  let serviceListingContainer = !isLrgSCreen ? 
+    " grid grid-cols-2 " :
+    " grid grid-cols-3 ";
+
+  if(isMegaScreen){
+    serviceListingContainer = ` flex justify-around max-w-[${widthMax}px] m-auto `;
+  }
 
   return(
     <>
@@ -40,6 +44,10 @@ function HomeServiceBlocks ({isSmallScreen}) {
       <div className="pt-10 pb-20">
         <div className="text-3xl text-center">
           Our Services
+        </div>
+
+        <div className=" w-3/4 m-auto text-center pt-4">
+          We specialize in providing expert in-home repair or replacement services for a wide range of Samsung and LG household appliances, including refrigerators, washers, dryers, ovens, and microwave, ensuring efficient and reliable solutions to keep your appliances running smoothly.
         </div>
 
 
