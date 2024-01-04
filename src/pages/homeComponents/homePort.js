@@ -1,14 +1,12 @@
 import React from "react";
 
-// pictures
-import additions_1 from "../../assets/pictures/homePortPics/additions_1.jpg";
-import renovations_1 from "../../assets/pictures/homePortPics/renovations_1.jpg";
-import framing_1 from "../../assets/pictures/homePortPics/framing_1.jpg";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
+import portfolioContent from "../../assets/content/portfolioContent";
 
-function PortImage({picture, isSmallScreen}){
+
+function PortImage({picture, shortDesc, isSmallScreen}){
   const photoDimensions = isSmallScreen ? " w-full h-[400px] " : " w-[300px] h-[200px] ";
   const photoStyle = `object-cover ${photoDimensions} `;
 
@@ -18,7 +16,7 @@ function PortImage({picture, isSmallScreen}){
         <img src={picture} alt="portfolio pic" className={photoStyle}/>
         <div className="hover:bg-drawerClearBg h-full w-full absolute top-0 left-0">
           <div className="invisible group-hover:visible absolute bottom-10 left-10">
-            explanation text
+            {shortDesc}
           </div>
         </div>
       </div>
@@ -30,7 +28,6 @@ function PortImage({picture, isSmallScreen}){
 function HomePort({isSmallScreen}) {
   // styles
   const galleryFlex = isSmallScreen ? " flex flex-col px-10 " : "flex flex-wrap justify-center px-2 space-x-4";
-  const picList = [framing_1, additions_1, renovations_1, ];
 
   return (
     <>
@@ -43,8 +40,8 @@ function HomePort({isSmallScreen}) {
         <div className="w-full ">
           <div className={galleryFlex + " w-full "}>
               {/* create a picture for each in the list */}
-              {picList.map((picture, index) => {
-                return(<PortImage picture={picture} isSmallScreen={isSmallScreen} key={index}/>)
+              {portfolioContent.map((project, index) => {
+                return(<PortImage picture={project.imageList[project.previewPic-1]} shortDesc={project.shortDesc} isSmallScreen={isSmallScreen} key={index}/>)
               })}
           </div>
         </div>
@@ -52,9 +49,9 @@ function HomePort({isSmallScreen}) {
         {/* bottom message */}
         <div className="pt-8 px-5 flex text-center">
           <div className="text-xl text-white">
-            Explore some of our other projects in the <Link to="/portfolio"><span className="hover:bg-highlight pb-1">
+            Explore our work further in the <Link to="/portfolio"><span className="hover:bg-highlight pb-1">
                 portfolio
-                <FaArrowRight className="text-tertiaryBg inline mx-2"/>
+                <FaArrowRight className="text-tertiaryText inline mx-2"/>
               </span>
             </Link>
           </div>

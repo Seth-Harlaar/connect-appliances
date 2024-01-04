@@ -9,7 +9,7 @@ const text = "Located in Rockwood, ON, our operational hub serves as a springboa
 
 
 function HomeServiceArea(){
-  const {isSmallScreen, isMedScreen, isLargeScreen, isMegaScreen} = useContext(ScreenContext);
+  const {isMedScreen, isMegaScreen} = useContext(ScreenContext);
 
   const width = isMegaScreen? 900 : 700;
   

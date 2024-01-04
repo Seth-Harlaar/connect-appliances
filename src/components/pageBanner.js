@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ScreenContext } from "../providers/screenProvider";
 
 
-function PageBanner ({title, description, isSmallScreen}) {
+function PageBanner ({title, description}) {
+  const {isSmallScreen} = useContext(ScreenContext);
+
   const heightAndPadding = isSmallScreen ? ' h-[300px] ' : ' h-[420px] ';
   return (
     <>

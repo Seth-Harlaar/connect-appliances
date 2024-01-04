@@ -2,9 +2,11 @@ import React, { useContext } from "react";
 import PageBanner from "../../components/pageBanner";
 import {ScreenContext} from "../../providers/screenProvider";
 
-import serviceListingsInfo from "../../assets/content/homeServicesContent";
+import servicePageContent from "../../assets/content/servicePageContent";
 
-function ServiceListing({service, isSmallScreen, isMedScreen}){
+function ServiceListing({service}){
+  const {isSmallScreen, isMedScreen} = useContext(ScreenContext);
+
   const paragraphTextSize = isSmallScreen ? " text-xs " : " text-md ";
   const containerFlex = isMedScreen ? "" : " flex space-x-5 ";
   const pictureDimensions = isMedScreen ? " w-full h-[250px] object-cover " : " min-w-[300px] max-w-[300px] ";
@@ -26,25 +28,25 @@ function ServiceListing({service, isSmallScreen, isMedScreen}){
             {service.title}
           </div>
           <div className={paragraphTextSize + " text-justify"}>
-            {service.textLong}
+            {service.desc}
           </div>
         </div>
       </div>
     </>
-  )
+  );
 }
 
 function Services() {
-  const {isSmallScreen, isMedScreen} = useContext(ScreenContext);
+  const {isMedScreen} = useContext(ScreenContext);
 
   const width = isMedScreen ? " " : " max-w-[900px] m-auto ";
 
   return (
     <>
-      <PageBanner title={"Services"} description={"Services you can trust."} isSmallScreen={isSmallScreen} />
+      <PageBanner title={"Services"} description={"Services you can trust."} />
       <div className={width + " p-10 flex flex-col space-y-10 "}>
-        {serviceListingsInfo.map((service, index) => {
-          return (<ServiceListing isSmallScreen={isSmallScreen} isMedScreen={isMedScreen} service={service} key={index}/>)
+        {servicePageContent.map((service, index) => {
+          return (<ServiceListing service={service} key={index}/>)
         })}
       </div>
     </>

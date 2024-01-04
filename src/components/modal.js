@@ -9,7 +9,7 @@ function Modal({children}){
 
   return(
     <>
-      <div className="z-50 fixed top-0 left-0 h-full w-full bg-drawerClearBg">
+      <div className="z-50 fixed top-0 left-0 h-full w-full bg-drawerClearBg flex flex-col justify-center">
         <div className={" h-[90vh] w-[90vh] relative m-auto bg-darkBg text-white text-justify flex flex-col justify-center"}>
           <div className=" px-5 pt-10 pb-5 ">
             {children}
